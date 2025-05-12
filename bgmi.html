@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BGMI APPLICATION</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" sizes="96x96"/>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #5bdae3, #b6458b);
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .form-wrapper {
+      max-width: 800px;
+      margin: auto;
+      background: #f0f0ef;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    input, select, textarea {
+      padding: 0.75rem;
+      border: 1px solid hsl(357, 42%, 42%);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #07e87f;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(69, 182, 73, 0.2);
+    }
+
+    fieldset {
+      border: 1px solid #791b1b;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    legend {
+      padding: 0 0.5rem;
+      font-weight: bold;
+    }
+
+    .inline-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .inline-group label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    button {
+      padding: 1rem;
+      font-size: 1rem;
+      background-color: #af3636;
+      color: rgb(242, 242, 245);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #369d3c;
+    }
+
+    @media (max-width: 600px) {
+      .inline-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-wrapper">
+  <h2>PLAYER REGISTRATION</h2>
+  <form>
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" required>
+    </div>
+
+    <div class="form-group">
+        <label for="In Game Name">In Game Name</label>
+        <input type="text" id="In Game Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="id">Gaming ID</label>
+        <input type="number" id="Gaming ID" required>
+      </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Create Password</label>
+      <input type="password" id="password" required>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" required>
+    </div>
+
+
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select id="gender" required>
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Non-binary</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>Graphics</legend>
+      <div class="inline-group">
+        <label><input type="radio" name="graphics" value="basic"> 40FPS</label>
+        <label><input type="radio" name="graphics" value="premium"> 60FPS</label>
+        <label><input type="radio" name="graphics" value="enterprise">90FPS</label>
+        <label><input type="radio" name="graphics" value="enterprise">120FPS</label>
+      </div>
+    </fieldset>
+    <fieldset>
+    <label for="year">Gaming Carrer Starting Year:</label>
+<select id="year" name="year">
+  <option value="2018">2025</option>
+  <option value="2019">2024</option>
+  <option value="2020">2023</option>
+  <option value="2021">2022</option>
+  <option value="2022">2021</option>
+  <option value="2023">2020</option>
+  <option value="2024">2019</option>
+  <option value="2025">2018</option>
+</select>
+</fieldset>
+
+    <fieldset>
+      <legend>Type of Player</legend>
+      <div class="inline-group">
+        <label><input type="radio" name="plan" value="Assulter">Assulter</label>
+        <label><input type="radio" name="plan" value="Sniper"> Snipfer</label>
+        <label><input type="radio" name="plan" value="IGL"> IGL</label>
+        <label><input type="radio" name="plan" value="LOOTER"> LOOTER</label>
+        <label><input type="radio" name="plan" valuve="NOOB">NOOB</label>
+      </div>
+    </fieldset>
+
+    <div class="form-group">
+      <label for="GUN">Favourite GUN</label>
+        <input type="text" id="In Game Name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="GUN">Max Rank</label>
+        <select id="gender" required>
+        <option value="">--Select Rank--</option>
+        <option>Platinum</option>
+        <option>Dimond</option>
+        <option>ACE</option>
+        <option>ACE Master</option>
+        <option>ACE Dominater</option>
+        <option>CONQUER</option>
+      </select>
+        
+    </div>
+
+
+    <div class="form-group">
+      <label for="range">Game Sense</label>
+      <input type="range" id="range" min="0" max="10">
+    </div>
+
+    <div class="form-group">
+      <label for="file">Player Picture</label>
+      <input type="file" id="file">
+    </div>
+    <button type="submit">Submit Form</button>
+    </form>
+    </div>
+
+</body>
+</html>
